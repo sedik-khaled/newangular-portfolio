@@ -1,0 +1,48 @@
+ <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="profile-wrapper">
+            <div class="profile-image-container" 
+                 (mousemove)="onMouseMove($event)" 
+                 (mouseleave)="onMouseLeave()">
+              <img src="./1d51a75b-0165-407a-b2da-e06fead8f185.jfif" alt="Sedik Khaled" class="profile-image">
+              <div class="image-border-animation"></div>
+              <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+              </div>
+            </div>
+            
+            <div class="hero-text">
+              <div class="welcome-text">
+                <span class="wave">👋</span> Welcome to my portfolio!
+              </div>
+              <h1>
+                I'm <span class="highlight">Sedik Khaled</span>
+                <span class="cursor" [class.blink]="!showCursor">{{ cursorSymbol }}</span>
+              </h1>
+              <p class="typed-text">{{ displayedText }}</p>
+              <div class="cta-buttons">
+                <button class="resume-btn" (click)="downloadResume()">
+                  <span>Download Resume</span>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 16V4M12 16L8 12M12 16L16 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M20 21H4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
+                </button>
+                <button class="contact-btn" (click)="scrollToContact()">
+                  <span>Contact Me</span>
+                  <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="scroll-indicator">
+        <div class="mouse"></div>
+        <span>Scroll Down</span>
+      </div>
+    </section>

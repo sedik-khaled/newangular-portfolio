@@ -1,0 +1,32 @@
+<section class="section skills" id="skills">
+      <div class="container">
+        <div class="section-title">
+          <h2>Technical Skills</h2>
+          <p>Technologies I work with</p>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-category" *ngFor="let category of skillCategories">
+            <h3>{{ category.name }}</h3>
+            <div class="skills-container">
+              <div class="skill-item" *ngFor="let skill of category.skills" 
+                   (mouseenter)="animateSkill($event)"
+                   [style.--skill-color]="skill.color">
+                <div class="skill-icon">
+                  <i [class]="skill.icon"></i>
+                </div>
+                <div class="skill-info">
+                  <h4>{{ skill.name }}</h4>
+                  <div class="skill-bar">
+                    <div class="skill-progress" 
+                         [style.width.%]="skill.level"
+                         [style.background]="skill.color">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>

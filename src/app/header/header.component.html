@@ -1,0 +1,37 @@
+<header [class.scrolled]="isScrolled">
+      <div class="container">
+        <div class="nav-container">
+          <a class="logo" (click)="scrollToSection('home')">Sedik Khaled</a>
+          
+          <div class="burger-menu" (click)="toggleMenu()">
+            <i [class.fa-bars]="!isMenuOpen" [class.fa-times]="isMenuOpen" class="fas"></i>
+          </div>
+
+          <div class="nav-links-container" [class.active]="isMenuOpen">
+            <ul class="nav-links">
+              <li><a (click)="scrollToSection('home')">Home</a></li>
+              <li><a (click)="scrollToSection('about')">About</a></li>
+              <li><a (click)="scrollToSection('skills')">Skills</a></li>
+              <li><a (click)="scrollToSection('projects')">Projects</a></li>
+              <li><a (click)="scrollToSection('contact')">Contact</a></li>
+              <li>
+                <a href="https://www.linkedin.com/in/sedik-khaled-ramadan-495935249/" target="_blank" title="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              </li>
+              <li>
+                <a href="https://github.com/sedik-khaled" target="_blank" title="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+              </li>
+               
+              
+            </ul>
+            
+            <div class="social-links">
+             
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
